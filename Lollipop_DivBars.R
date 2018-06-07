@@ -35,7 +35,7 @@ Diverging_Bars<- ggplot(MDF, aes(x = MDF$"profile name", y = MDF$norm_tg_angle, 
                     labels = c("Above Average", "Below Average"), 
                     values = c("above"="lawngreen", "below"="coral1")) + 
   labs(title= "Mariana Trench. Diverging Bars",
-  	subtitle=expression(paste("Normalized steepness", tg*degree*(A/H), "vs profiles 1:25"))) + 
+  	subtitle=expression(paste("Normalized steepness ", tg*degree*(A/H), " vs profiles 1:25"))) + 
   coord_flip() +
   theme(plot.title = element_text(size = 10), 
     		legend.title = element_text(size=8), legend.text = element_text(colour="black", size = 8)) 
@@ -49,7 +49,7 @@ Lollipop <- ggplot(MDF, aes(x = MDF$"profile name", y = MDF$norm_tg_angle, label
 	geom_segment(aes(y = 0, x = MDF$"profile name", yend = MDF$norm_tg_angle, xend = MDF$"profile name"), color = "black") +   
 	geom_text(color="white", size=2) +   
 	labs(title="Mariana Trench: Diverging Lollipop Chart",          
-	subtitle=expression(paste("Normalized steepness", tg*degree*(A/H), "vs profiles 1:25"))) +
+	subtitle=expression(paste("Normalized steepness ", tg*degree*(A/H), " vs profiles 1:25"))) +
 	ylim(-2.5, 2.5) +   
 coord_flip() +
     theme(plot.title = element_text(size = 10), legend.title = element_text(size=8), legend.text = element_text(colour="black", size = 8)) 
